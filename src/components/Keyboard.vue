@@ -26,7 +26,7 @@
                 <Keycap v-else v-bind:keycap="keycap" v-bind:pressed="false"/> 
             </div>
         </div>
-        <div class='space' v-bind:class="{spacePressed:pressedKey==' '}"/>
+        <!-- <div class='space' v-bind:class="{spacePressed:pressedKey==' '}"/> -->
     </div>
     </div>
 
@@ -99,17 +99,18 @@ export default {
 
 <style lang="postcss" scoped>
     .container {
-        margin: 40px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
     }
     .keyboard {
         box-sizing: border-box;
-        border: 20px solid #eee;
         border-radius: 5px;
-        overflow: hidden;
-        background-color: #eee;
-        display: inline-block;
-        width: 100%;
-        margin: auto;
+        display: block;
+        width: 80%;
+        margin: 60px auto auto auto;
     }
     .column {
         display: flex;
@@ -130,7 +131,8 @@ export default {
     }
 
     .pragraph {
-        margin: 40px 0;
+        margin: auto auto 0 auto;
+        display: block;
     }
     .text-container {
         margin: auto;

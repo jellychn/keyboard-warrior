@@ -25,8 +25,10 @@ export default {
         align-items: center;
         display: flex;
         border-radius: 3px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px #ddd;
     }
     .isPressed {
-        background-color: #ddd;
+        background-color: #eee;
     }
 </style>
